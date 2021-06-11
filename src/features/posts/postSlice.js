@@ -5,7 +5,6 @@ import {
   createSelector,
   createEntityAdapter,
 } from '@reduxjs/toolkit'
-// import { sub } from 'date-fns'
 import { client } from '../../api/client'
 import { LOADING_STATUS } from '../../variables/loadingStatus'
 
@@ -120,8 +119,6 @@ export const { postAdded, postUpdated, addReaction } = postSlice.actions
 
 export default postSlice.reducer
 
-// the state here is the root state
-// export const selectAllposts = (state) => state.posts.posts
 
 export const {
   selectAll: selectAllposts, 
@@ -130,9 +127,6 @@ export const {
 }
 = postsAdapter.getSelectors(state => state.posts)
 
-
-// export const selecPostById = (state, postId) =>
-//   state.posts.posts.find((post) => post.id === postId)
 
 export const selectPostStatus = (state) => state.posts.status
 

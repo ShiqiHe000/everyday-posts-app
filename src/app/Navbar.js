@@ -5,6 +5,7 @@ import {
   selectAllNotifications,
 } from '../features/notifications/notificationSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import styles from '../css/Navbar.module.css';
 
 export const Navbar = () => {
   const dispatch = useDispatch()
@@ -28,7 +29,7 @@ export const Navbar = () => {
   return (
     <nav>
       <section>
-        <h1>Redux Essentials Example</h1>
+        <h1>Everyday Posts <small className={styles.subTitle}>Share your life here.</small></h1>
 
         <div className="navContent">
           <div className="navLinks">
