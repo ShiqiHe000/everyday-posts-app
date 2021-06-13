@@ -106,7 +106,7 @@ const postSlice = createSlice({
     },
     [createNewPost.fulfilled]: (state, action) => {
       state.status = LOADING_STATUS.SUCCEEDED
-      return postsAdapter.addOne;
+      postsAdapter.addOne(state, action.payload);
     },
     [createNewPost.rejected]: (state, action) => {
       state.status = LOADING_STATUS.FAILED

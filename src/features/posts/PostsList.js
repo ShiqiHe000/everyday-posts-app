@@ -29,7 +29,6 @@ const PostsList = () => {
   } else if (postStatus === LOADING_STATUS.LOADING) {
     content = <div className="loader">Loading...</div>
   } else if (postStatus === LOADING_STATUS.SUCCEEDED) {
-    console.log(posts);
     content = posts.map((post) => (
       <PostExcerpt post={post} key={post.id} />
     ))
